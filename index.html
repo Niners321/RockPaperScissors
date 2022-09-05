@@ -2,46 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rps_style.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <script>
-
-
-
-function getComputerChoice(guess){
-    if (Math.floor(Math.random() * 2) === 0){
-        return "rock";
-    } else if (Math.floor(Math.random() * 2) === 1){
-        return "paper";
-    } else {
-        return "scissors";
-    }
-}
-
-
-function game(playerSelection, computerSelection) {
+    <div class="game">
+    <!--Title-->
+    <div class="title">Rock Paper Scissors</div>
     
-    if (playerSelection === computerSelection) {
-        return `Tied Game! You both picked ${playerSelection}.`;
-    } else if (playerSelection === "paper" && computerSelection === "scissors") {
-        return `Computer wins! ${computerSelection} beats ${playerSelection}!`;
-    } else if (playerSelection === "scissors" && computerSelection === "rock") {
-        return `Computer wins! ${computerSelection} beats ${playerSelection}!`;
-    } else if (playerSelection === "rock" && computerSelection === "paper") {
-        return `Computer wins! ${computerSelection} beats ${playerSelection}!`;
-    } else {
-        return `Player wins! ${playerSelection} beats ${computerSelection}!`;
-    }
-}
-const playerSelection = prompt("Start the game by picking among 'Rock, Paper, Scissors'").toLowerCase();
-const computerSelection = getComputerChoice();
-console.log(game(playerSelection, computerSelection))
+    <!--Scores-->
+    <div class="score">
+        <div class="playerScore">
+            <h2>Player:</h2>
+            <p class="p-count count">0</p>
+        </div>
+        <div class="ComputerScore">
+            <h2>Computer:</h2>
+            <p class="c-count count">0</p>
+        </div>
+    </div>
+    <div class="move">Player... Choose your weapon...</div>
 
+    <!--Remaining moves-->
+    <div class="movesleft">Moves Left: 10</div>
+    
+    <!--buttons for player to chose-->
+    <div class="options">
+
+    <button class="rock">Rock</button>
+    <button class="paper">Paper</button>
+    <button class="scissors">Scissors</button>
+    </div>
+    
+    <!--Game over. Overall result-->
+    <div class="result"></div>
+    
+    <!--Reload in order to play another game-->
+    <button class="reload">Reload</button>
+</div>
+    
+    <script src="rockpaperscissors.js">
     </script>
-    
-
 </body>
 </html>

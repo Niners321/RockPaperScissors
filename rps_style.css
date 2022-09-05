@@ -1,0 +1,42 @@
+*{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color:black;
+    color: white;
+}
+
+.title{
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.game{
+    border-width: 5px;
+    border-color: rgb(1, 97, 6);
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+}
+
+.count{
+    border-width: 2px;
+    border-color: rgb(1, 97, 6);
+    border-style: solid;
+    padding: 0;
+    text-align: center;
+
+}
+
+
+button{
+    background-color: black;
+    border-color: rgb(1, 97, 6);
+    border-style: ridge;
+    margin: 15px;
+    width: 75px;
+    height: 30px;
+    
+}
